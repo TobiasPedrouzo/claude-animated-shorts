@@ -1,5 +1,7 @@
 # Implementación
 
+> **Estado actual:** la dirección visual del prototipo fue rechazada. Este documento conserva información técnica del experimento; no acredita calidad de producción. Renderizar requiere `--experimental-native`; aprobación y exportación están deshabilitadas.
+
 La base original queda preservada en `templates/` y `references/`, con su licencia MIT. El motor de producción nuevo está separado en `studio/`. Los fotogramas de estudio no son recursos de producción.
 
 1. Esquema compartido, validación de objetos, personajes, acciones, fuentes y posiciones.

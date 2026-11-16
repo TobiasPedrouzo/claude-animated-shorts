@@ -1,6 +1,8 @@
 ---
 name: stickman-shorts
-description: Produce original, locally rendered stickman Shorts with validated storyboards, audio-synchronized captions, scene caching, and evidence-based review.
+description: Develop the requested local stickman Shorts tools and visual direction. The current native prototype is experimental and visually rejected for production.
 ---
 
-Read `.claude/skills/stickman-shorts/SKILL.md` and follow that maintained production workflow. `templates/LEGACY_SKILL.md` documents the original bridge demonstration only; its no-caption, paid-voice, external-path and review assumptions do not govern new studio jobs.
+Read `CLAUDE.md`, `docs/VISUAL_REVIEW.md` and `.claude/skills/stickman-shorts/SKILL.md` before doing new work. The feather demo is not an approved look or a production template.
+
+The original bridge source, audio pipeline and visual studies remain available as engineering references. The current native experiment must not replace them by default or be promoted to production based on render speed or technical QA.

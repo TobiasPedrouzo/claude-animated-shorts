@@ -1,7 +1,9 @@
-# Stickman Shorts Studio
+# Estado de la dirección visual
 
-Use `.claude/skills/stickman-shorts/SKILL.md` for all new productions. The historical bridge templates are references, not the active production pipeline.
+El motor nativo de `studio/` es experimental y su demo `feather` fue rechazada. No usarlo como motor predeterminado ni como referencia de calidad para producir historias nuevas. Un pase técnico no revierte ese rechazo.
 
-Run `npm run doctor` before a first production. Use `npm run shorts -- render --project <JSON> --profile preview` to iterate, then `--profile final` for delivery. Never claim a render succeeded before reading its status and QA report.
+La base original se conserva en `templates/bridge/`, `templates/audio/` y `references/`. Estudiar y preservar su dirección de cámara, riqueza de escenas, profundidad, iluminación y acciones; adaptar esas técnicas al stickman solicitado. Las referencias no autorizan copiar guiones, voces, branding ni imágenes de terceros.
 
-Communicate with the user in Spanish. All channel-facing story content is original natural American English. Preserve the Observer's canonical identity. Never publish or upload.
+Leer `docs/VISUAL_REVIEW.md` y `.claude/skills/stickman-shorts/SKILL.md`. Las pruebas nativas requieren `--experimental-native`. La aprobación y exportación de producción permanecen deshabilitadas mientras `studio/production-status.json` no refleje una dirección visual realmente aceptada. Mantener el render local Swift/AVFoundation según las reglas del proyecto.
+
+Comunicar en español; contenido del canal en inglés estadounidense. Preservar el Observer. Nunca publicar ni subir videos.

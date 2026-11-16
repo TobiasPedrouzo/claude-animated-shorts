@@ -1,39 +1,27 @@
 ---
 name: stickman-shorts
-description: Create and improve original animated stickman Shorts using this repository's deterministic local Swift/AVFoundation production tools. Use for research, scripting, storyboard authoring, rendering, repair, QA, and export.
+description: Research and develop the requested stickman Shorts workflow, with scene-specific visual direction and local native rendering experiments. The current native look is rejected for production.
 ---
 
-# Original stickman production
+# Stickman visual development
 
-The user's output is an original video with coherent actions and clear causality. Tools execute structured plans; prose alone is not a finished video. Communicate in Spanish; narration is natural American English. Never publish publicly or upload anything. No Anthropic API key is required for local production in Claude Code.
+Read `AGENTS.md`, `CLAUDE.md`, `docs/VISUAL_REVIEW.md`, and `studio/production-status.json` first. Communicate in Spanish; channel-facing stories must use natural American English. Never publish or upload.
 
-## Establish the environment
+## Current decision
 
-1. Read `AGENTS.md`, `docs/SETUP.md`, `studio/lib/types.ts`, and `examples/feather.json`.
-2. Run `npm run doctor`. Explain exact missing prerequisites. Do not modify global SDK files or download assets silently. Do not read or print credentials.
-3. Check `npm run shorts -- list` and existing project JSON titles to avoid duplicate topics. Topic research must use real sources, not invented citations.
+The native `feather` demo was rejected for visual quality. It is not the desired look, not a production template, and not the default renderer. Its successful encoding, cache speed and technical QA do not approve its direction. Do not make another full Short by replacing narration and props in that layout. Do not change the status to approved based on tests or invented scores.
 
-## Research and direct
+The original repository's bridge/audio code and style studies remain engineering references for camera grammar, depth, lighting, motion, sound and scene-specific staging. Do not copy third-party footage, scripts, voices, branding or copyrighted reference images. Keep the requested stickman identity and the Observer's canonical silhouette and eyes.
 
-1. Select a concrete event or physical explanation with a surprising first frame and a visual payoff. Preserve source URL, specific evidence, and fact IDs in project metadata. Separate factual narration from reconstructed visuals. Never invent dialogue and call it history.
-2. Write an original script, aiming for intelligible fast speech and roughly 60 seconds. Voice duration sets the timeline. Revise the script when pacing fails; do not force duration with excessive audio acceleration.
-3. Use ~18–30 purposeful beats. Every scene's narration must correspond to its action and props. Keep person/object identities stable across cuts. State release heights, targets, direction and reactions consistently. A static pose with unrelated props is not meaningful storytelling.
-4. Author a project JSON using the version-1 types. Only use registered actions, props and camera modes. Add missing mechanics in the renderer and tests before referencing them. Do not execute generated source from a storyboard.
-5. Characters have round white heads, dark jointed limbs, two eyes, and fixed proportions. Observer is a separate canonical hooded figure with two pale cyan eyes and no facial details; it is silent.
+## Corrective workflow
 
-## Produce and inspect
+1. Research the story using reliable sources. Preserve evidence and distinguish facts from reconstructed visuals.
+2. Design each scene for its action and narration. Show cause and effect, character intention and reactions. Avoid repeated poses, floating props, large unused areas and arbitrary camera changes.
+3. Develop a short sequence that demonstrates a complete interaction and intentional shot changes. Keep rendering local with Swift/AVFoundation according to the project rules. Adapt useful techniques from the original source instead of silently discarding its visual sophistication.
+4. Use `studio/lib/types.ts` and `studio/story.schema.json` only as current experimental interfaces. Add missing mechanics before referencing them. Never execute source code generated inside a storyboard.
+5. Native render experiments require the explicit `--experimental-native` flag. Example: `npm run shorts -- render --project projects/test.json --profile preview --experimental-native`. Label the output as experimental. `npm run smoke` is a rig test, not a demonstration of accepted production quality.
+6. Inspect actual motion, representative full-resolution frames and actual audio. Technical metadata alone is insufficient. If actual audio cannot be listened to, record that limit. Preserve the rejection while visual deficiencies remain unresolved.
+7. Keep deterministic improvements such as content caching, bounded workers, accurate timing, resource validation and diagnostic reports where useful. Do not trade acting, staging or visual richness for render speed.
+8. Approval and export of the current prototype are disabled. A new visual direction must be substantively rebuilt and evaluated before production is re-enabled; do not bypass this by adding a positive review JSON.
 
-1. Validate: `npm run shorts -- validate --project projects/<id>.json`.
-2. Preview: `npm run shorts -- render --project projects/<id>.json --profile preview`.
-3. Inspect `outputs/<id>/preview/qa/contact.png` and every affected scene PNG. Listen to the actual MP4 narration; inspect caption synchronization and pauses. Read status, alignment diagnostics, and the technical QA report. If your environment cannot play audio, say so and keep editorial approval pending.
-4. Repair the smallest affected scenes, then rerun. Cached audio and scenes are reused. Limit creative revisions to three passes before marking unresolved issues clearly. Never mark a run approved just because it rendered.
-5. Final: `npm run shorts -- render --project projects/<id>.json --profile final`. Inspect final-resolution frames and audio; a preview review does not approve a different final MP4.
-6. A technical pass is separate from editorial acceptance. Review hook, clarity, continuity, character consistency, captions, narration, pacing, facts and ending. Each must be ≥8/10 to approve. Keep scene-specific notes, frame paths actually inspected, whether actual audio was listened to, reviewer identity, and exact SHA-256 from `run.json`. Never fabricate evidence.
-7. Use `examples/review.json` as the shape. Save it in the project folder and run `npm run shorts -- review --id <id> --file <review.json>` only after real review. `NEEDS_REVIEW` is an honest useful output, not a failure to hide.
-8. Export locally: `npm run shorts -- export --id <id> --destination <local-output-folder>`. Export rejects stale QA/review and preview renders. Report paths, actual checks and measured production time. Do not promise full autonomy or 100% quality from an untested integration.
-
-## Performance and repairs
-
-Use preview resolution for composition changes. Parallel scene rendering defaults to two workers; cap at four. Never launch multiple jobs with the same project ID. Reuse cached stages. Do not delete shared caches or outputs to make a benchmark look better. Stage logs and failed partial artifacts are diagnostic evidence. Cached renders must be keyed by all behavior-affecting inputs; update cache versions after changing alignment logic or audio models.
-
-The legacy bridge's code and docs retain their MIT license. Its reference frames and contact sheets are study materials; never incorporate them into a produced video. Missing GLB assets in the legacy template do not affect the procedural native engine.
+No Anthropic API key is needed for local technical tools. Integration with an authenticated Claude Code session remains unverified. Do not claim full autonomous production is complete.

@@ -1,0 +1,6 @@
+{
+  "nativeRendererStatus": "rejected-visual",
+  "reason": "La demo feather no cumple la dirección visual ni el nivel de producción requerido.",
+  "rejectedExample": "feather",
+  "technicalChecksAreVisualApproval": false
+}

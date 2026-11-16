@@ -1,5 +1,7 @@
 # Instalación local
 
+> **Estado actual:** la dirección visual del prototipo fue rechazada. Este documento conserva información técnica del experimento; no acredita calidad de producción. Renderizar requiere `--experimental-native`; aprobación y exportación están deshabilitadas.
+
 ## Requisitos
 
 - macOS y herramientas de desarrollo de Apple completas (`swiftc` con acceso a Foundation, AppKit y AVFoundation).

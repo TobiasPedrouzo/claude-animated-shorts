@@ -1,5 +1,7 @@
 # Mediciones de producción
 
+> **Estado actual:** la dirección visual del prototipo fue rechazada. Este documento conserva información técnica del experimento; no acredita calidad de producción. Renderizar requiere `--experimental-native`; aprobación y exportación están deshabilitadas.
+
 Medido localmente el 16 de noviembre de 2026 en esta Mac arm64. Node 26.13.1, Swift 6.2, FFmpeg 9.0.2 y whisper.cpp 1.9.5. Voz Samantha y modelo base.en. Cada tiempo incluye las etapas realmente ejecutadas y QA; la descarga inicial del modelo y la reparación temporal del SDK no se cuentan como producción de video.
 
 | Caso | Tiempo | Voces reutilizadas | Escenas reutilizadas | Escenas renderizadas |

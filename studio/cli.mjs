@@ -20,7 +20,8 @@ import {
   fileHash,
 } from "./lib/jobs.mjs";
 import { validatePlan } from "./lib/plan.mjs";
-const help = `Stickman Shorts Studio — producción local\n\n npm run shorts -- doctor\n npm run shorts -- init --id mi-corto\n npm run shorts -- validate --project examples/feather.json\n npm run shorts -- render --project examples/feather.json [--profile preview|final] [--concurrency 2]\n npm run shorts -- qa --id feather --profile final\n npm run shorts -- status --id feather\n npm run shorts -- list\n npm run shorts -- preview --id feather\n npm run shorts -- review --id feather --file review.json\n npm run shorts -- export --id feather --destination /ruta/local\n\nClaude Code crea y verifica el storyboard; el motor no inventa investigación.\nLa exportación requiere QA técnico y revisión editorial vigentes. No hay publicación automática.`;
+import { requireProductionApproval } from "./lib/production.mjs";
+const help = `Stickman Shorts Studio — producción local\n\n npm run shorts -- doctor\n npm run shorts -- init --id mi-corto\n npm run shorts -- validate --project examples/feather.json\n npm run shorts -- render --project examples/feather.json [--profile preview|final] [--concurrency 2]\n npm run shorts -- qa --id feather --profile final\n npm run shorts -- status --id feather\n npm run shorts -- list\n npm run shorts -- preview --id feather\n npm run shorts -- review --id feather --file review.json\n npm run shorts -- export --id feather --destination /ruta/local\n\nClaude Code crea y verifica el storyboard; el motor no inventa investigación.\nEl motor nativo fue rechazado visualmente: producción, aprobación y exportación deshabilitadas. Para pruebas técnicas se requiere --experimental-native. No hay publicación automática.`;
 try {
   const { positionals, values: v } = parseArgs({
     allowPositionals: true,
@@ -32,6 +33,7 @@ try {
       file: { type: "string" },
       destination: { type: "string" },
       help: { type: "boolean" },
+      "experimental-native": { type: "boolean", default: false },
     },
   });
   const command = positionals[0];
@@ -131,6 +133,7 @@ try {
           await render(path.resolve(v.project), {
             profile: v.profile,
             concurrency: Number(v.concurrency),
+            experimentalNative: v["experimental-native"],
           }),
           null,
           2,
@@ -170,6 +173,7 @@ try {
       console.log(await readFile(path.join(out(), "qa/report.json"), "utf8"));
       break;
     case "review": {
+      await requireProductionApproval();
       if (!v.file) throw Error("--file obligatorio");
       const folder = out(),
         review = await readJSON(v.file),
@@ -224,6 +228,7 @@ try {
       break;
     }
     case "export": {
+      await requireProductionApproval();
       if (!v.destination) throw Error("--destination obligatorio");
       const folder = out(),
         sha = await fileHash(path.join(folder, "video.mp4")),

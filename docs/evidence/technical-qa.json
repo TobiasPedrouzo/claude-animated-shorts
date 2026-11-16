@@ -33,8 +33,8 @@
     "no_frozen_spans": true
   },
   "technicalPassed": true,
-  "visualReview": "PENDING: inspect contact.png and every scene PNG",
-  "creativeReview": "PENDING: listen to narration and inspect story, sources, continuity and pacing",
+  "visualReview": "REJECTED: composition, scene repetition and character acting do not meet the requested quality.",
+  "creativeReview": "REJECTED_VISUAL; actual narration listening remains unperformed.",
   "limitations": [
     "Spatial blank/freeze analysis uses 96x170 samples; tiny defects require visual inspection.",
     "Caption positioning is a deterministic layout invariant; optical clipping and semantic collisions require visual review.",

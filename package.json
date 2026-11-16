@@ -2,7 +2,7 @@
   "name": "stickman-shorts-studio",
   "version": "0.1.0",
   "private": true,
-  "description": "Local, validated stickman production studio for Claude Code on macOS",
+  "description": "Experimental local production tooling; native visual direction rejected for production",
   "type": "module",
   "engines": {
     "node": ">=22"
@@ -13,11 +13,12 @@
     "build": "node studio/cli.mjs build",
     "doctor": "node studio/cli.mjs doctor",
     "demo": "node studio/cli.mjs render --project examples/feather.json",
-    "smoke": "node studio/cli.mjs render --project examples/smoke.json --profile preview",
+    "smoke": "node studio/cli.mjs render --project examples/smoke.json --profile preview --experimental-native",
     "setup:models": "node scripts/setup-model.mjs",
     "format": "prettier --write \"studio/**/*.{mjs,ts,json}\" \"scripts/*.mjs\" package.json package-lock.json",
     "format:check": "prettier --check \"studio/**/*.{mjs,ts,json}\" \"scripts/*.mjs\" package.json package-lock.json",
-    "format:swift": "xcrun swift-format format --in-place --recursive studio/native"
+    "format:swift": "xcrun swift-format format --in-place --recursive studio/native",
+    "demo:experimental": "node studio/cli.mjs render --project examples/feather.json --experimental-native"
   },
   "devDependencies": {
     "prettier": "3.10.1"

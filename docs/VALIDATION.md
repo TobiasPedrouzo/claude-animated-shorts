@@ -1,12 +1,14 @@
 # Validación ejecutada
 
+> **Estado actual:** la dirección visual del prototipo fue rechazada. Este documento conserva información técnica del experimento; no acredita calidad de producción. Renderizar requiere `--experimental-native`; aprobación y exportación están deshabilitadas.
+
 Fecha: 16 de noviembre de 2026. Los resultados son locales; no se atribuyen a CI ni a una sesión de Claude Code que no se haya ejecutado.
 
 ## Implementado y probado
 
 - Instalación npm reproducible sin dependencias de ejecución (`npm ci --ignore-scripts --offline`).
 - Compilación optimizada del motor Swift y diagnóstico de voces/herramientas.
-- Trece pruebas automatizadas de contratos, referencias, posiciones, tiempos, correspondencia audio-guion, agrupación de palabras cortas, concurrencia y errores de procesos.
+- Catorce pruebas automatizadas de contratos, referencias, posiciones, tiempos, correspondencia audio-guion, agrupación de palabras cortas, concurrencia y errores de procesos.
 - Render de cinco escenas: caminar, agarrar un libro unido a la mano, señalar, empujar y caer. Dos stickman y aparición silenciosa del Observer en el borde de la última escena.
 - Render completo del corto original `feather`, con 24 escenas y fuentes NASA/Harvard preservadas.
 - Revisión independiente del MP4: 1080×1920, H.264/AAC, 30 fps, 69 segundos, 2.070 fotogramas decodificados y 20 controles técnicos aprobados. Pico de audio −2,3 dBFS.

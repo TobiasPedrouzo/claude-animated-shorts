@@ -181,3 +181,26 @@ test("shared cache locks serialize different production jobs", async () => {
     await fs.rm(directory, { recursive: true });
   }
 });
+
+test("visually rejected native engine cannot become default production", async () => {
+  await assert.rejects(
+    run(process.execPath, [
+      "studio/cli.mjs",
+      "render",
+      "--project",
+      "examples/feather.json",
+    ]),
+    /dirección visual.*rechazada/s,
+  );
+  await assert.rejects(
+    run(process.execPath, [
+      "studio/cli.mjs",
+      "export",
+      "--id",
+      "feather",
+      "--destination",
+      "/tmp/not-approved",
+    ]),
+    /dirección visual.*rechazada/s,
+  );
+});

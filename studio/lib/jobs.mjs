@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { validatePlan, compileTimeline, digest, srt } from "./plan.mjs";
 import { alignAudio } from "./alignment.mjs";
+import { requireProductionApproval } from "./production.mjs";
 export const ROOT = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   "../..",
@@ -187,8 +188,9 @@ export async function fileHash(p) {
 }
 export async function render(
   project,
-  { profile = "final", concurrency = 2 } = {},
+  { profile = "final", concurrency = 2, experimentalNative = false } = {},
 ) {
+  if (!experimentalNative) await requireProductionApproval();
   if (!["preview", "final"].includes(profile))
     throw Error("Perfil debe ser preview o final");
   if (!Number.isInteger(concurrency) || concurrency < 1 || concurrency > 4)
@@ -409,9 +411,9 @@ export async function render(
     stats.output = output;
     stats.qa = qa.technicalPassed;
     await writeJSON(path.join(out, "run.json"), stats);
-    await status("NEEDS_REVIEW", {
+    await status("EXPERIMENTAL_NOT_APPROVED", {
       message:
-        "QA técnico aprobado. Falta revisar imagen, narración y continuidad.",
+        "Prueba técnica completada. La dirección visual de este motor sigue rechazada para producción.",
       videoSHA256: stats.videoSHA256,
     });
     return { out, output, stats };
