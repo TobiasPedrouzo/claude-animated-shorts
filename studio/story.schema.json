@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/TobiasPedrouzo/claude-animated-shorts/studio/story.schema.json",
+  "title": "Stickman Short plan",
+  "type": "object",
+  "required": [
+    "version",
+    "id",
+    "title",
+    "language",
+    "voice",
+    "sources",
+    "facts",
+    "scenes"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 140
+    },
+    "language": {
+      "const": "en-US"
+    },
+    "voice": {
+      "type": "object",
+      "required": ["provider", "name", "rate"],
+      "properties": {
+        "provider": {
+          "const": "apple"
+        },
+        "name": {
+          "type": "string"
+        },
+        "rate": {
+          "type": "number",
+          "minimum": 0.4,
+          "maximum": 0.6
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "url", "evidence"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "claim", "source"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "claim": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 60,
+      "items": {
+        "$ref": "#/$defs/scene"
+      }
+    }
+  },
+  "$defs": {
+    "actor": {
+      "type": "object",
+      "required": ["id", "kind", "action", "x", "toX", "scale", "accent"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": ["stickman", "observer"]
+        },
+        "action": {
+          "enum": [
+            "idle",
+            "walk",
+            "point",
+            "grab",
+            "push",
+            "fall",
+            "celebrate",
+            "surprise"
+          ]
+        },
+        "x": {
+          "type": "number",
+          "minimum": 140,
+          "maximum": 940
+        },
+        "toX": {
+          "type": "number",
+          "minimum": 140,
+          "maximum": 940
+        },
+        "scale": {
+          "type": "number",
+          "minimum": 0.4,
+          "maximum": 1.4
+        },
+        "accent": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        }
+      }
+    },
+    "prop": {
+      "type": "object",
+      "required": ["id", "kind", "x", "y", "toY", "scale"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "hammer",
+            "feather",
+            "machine",
+            "table",
+            "ball",
+            "arrow",
+            "air",
+            "moon",
+            "book",
+            "chamber"
+          ]
+        },
+        "x": {
+          "type": "number",
+          "minimum": 80,
+          "maximum": 1000
+        },
+        "toX": {
+          "type": "number",
+          "minimum": 80,
+          "maximum": 1000
+        },
+        "y": {
+          "type": "number",
+          "minimum": 340,
+          "maximum": 1410
+        },
+        "toY": {
+          "type": "number",
+          "minimum": 340,
+          "maximum": 1410
+        },
+        "scale": {
+          "type": "number",
+          "minimum": 0.3,
+          "maximum": 2
+        },
+        "attachTo": {
+          "type": "string"
+        },
+        "releaseAt": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "motion": {
+          "enum": ["ease", "gravity"]
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "required": [
+        "id",
+        "narration",
+        "background",
+        "transition",
+        "facts",
+        "dramatization",
+        "characters",
+        "props",
+        "camera",
+        "sound"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "narration": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "background": {
+          "enum": ["paper", "lab", "moon"]
+        },
+        "transition": {
+          "enum": ["cut", "match"]
+        },
+        "facts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dramatization": {
+          "type": "boolean"
+        },
+        "characters": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/$defs/actor"
+          }
+        },
+        "props": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/prop"
+          }
+        },
+        "camera": {
+          "type": "object",
+          "required": ["mode", "zoom", "pan"],
+          "properties": {
+            "mode": {
+              "enum": ["hold", "pan", "follow", "shake", "zoom"]
+            },
+            "zoom": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 1.15
+            },
+            "pan": {
+              "type": "number",
+              "minimum": -60,
+              "maximum": 60
+            }
+          }
+        },
+        "sound": {
+          "enum": ["none", "click", "whoosh", "impact"]
+        }
+      }
+    }
+  }
+}

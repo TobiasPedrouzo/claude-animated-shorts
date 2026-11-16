@@ -1,0 +1,9 @@
+{
+  "videoSHA256": "replace-with-sha256-of-actually-reviewed-final-mp4",
+  "reviewer": "",
+  "approved": false,
+  "audioListened": false,
+  "framesInspected": [],
+  "scores": {"hook": 0, "clarity": 0, "continuity": 0, "characterConsistency": 0, "captions": 0, "narration": 0, "pacing": 0, "facts": 0, "ending": 0},
+  "sceneNotes": []
+}

@@ -1,0 +1,43 @@
+{
+  "videoSHA256": "0fa784564c30d2ecc10b3870df66af855f3320f5aa17ac5a76e6dc8680ea8ee1",
+  "file": "outputs/feather/final/video.mp4",
+  "duration": 69.0,
+  "framesDecoded": 2070,
+  "width": 1080,
+  "height": 1920,
+  "peakDBFS": -2.3,
+  "meanDBFS": -16.9,
+  "blackFrames": [],
+  "blankFrames": [],
+  "frozenSpans": [],
+  "checks": {
+    "video_stream": true,
+    "audio_stream": true,
+    "h264": true,
+    "aac": true,
+    "resolution": true,
+    "fps": true,
+    "duration_matches": true,
+    "scene_coverage": true,
+    "caption_intervals": true,
+    "caption_safe_zone": true,
+    "characters_in_frame": true,
+    "props_in_frame": true,
+    "narration_coverage": true,
+    "audio_not_clipped": true,
+    "audio_not_silent": true,
+    "no_long_silence": true,
+    "decode_all_frames": true,
+    "no_black_frames": true,
+    "no_blank_frames": true,
+    "no_frozen_spans": true
+  },
+  "technicalPassed": true,
+  "visualReview": "PENDING: inspect contact.png and every scene PNG",
+  "creativeReview": "PENDING: listen to narration and inspect story, sources, continuity and pacing",
+  "limitations": [
+    "Spatial blank/freeze analysis uses 96x170 samples; tiny defects require visual inspection.",
+    "Caption positioning is a deterministic layout invariant; optical clipping and semantic collisions require visual review.",
+    "Speech timings come from audio analysis when provider markers are unavailable; inspect actual synchronization."
+  ]
+}

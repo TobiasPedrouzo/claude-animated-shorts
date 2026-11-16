@@ -21,8 +21,11 @@ let kitP: Promise<Kit> | null = null;
 export const loadKit = () => {
   if (!kitP) {
     const loader = new GLTFLoader();
-    kitP = Promise.all(KENNEY.map((n) => loader.loadAsync(staticFile(`bridge/kenney/${n}.glb`)).then((g) => [n, g.scene] as const).catch(() => [n, null] as const)))
-      .then((list) => Object.fromEntries(list.filter((e) => e[1]).map(([n, s]) => [n, s!])) as Kit);
+    kitP = Promise.all(KENNEY.map((n) => loader.loadAsync(staticFile(`bridge/kenney/${n}.glb`)).then((g) => [n, g.scene] as const).catch(() => {
+      throw new Error(`Missing legacy bridge asset: public/bridge/kenney/${n}.glb. Supply the licensed Kenney kit before rendering this template, or use the procedural native studio.`);
+    })))
+      .then((list) => Object.fromEntries(list) as Kit)
+      .catch((error: unknown) => { kitP = null; throw error; });
   }
   return kitP;
 };

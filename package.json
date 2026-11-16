@@ -1,0 +1,25 @@
+{
+  "name": "stickman-shorts-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local, validated stickman production studio for Claude Code on macOS",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "shorts": "node studio/cli.mjs",
+    "test": "node --test studio/tests/*.test.mjs",
+    "build": "node studio/cli.mjs build",
+    "doctor": "node studio/cli.mjs doctor",
+    "demo": "node studio/cli.mjs render --project examples/feather.json",
+    "smoke": "node studio/cli.mjs render --project examples/smoke.json --profile preview",
+    "setup:models": "node scripts/setup-model.mjs",
+    "format": "prettier --write \"studio/**/*.{mjs,ts,json}\" \"scripts/*.mjs\" package.json package-lock.json",
+    "format:check": "prettier --check \"studio/**/*.{mjs,ts,json}\" \"scripts/*.mjs\" package.json package-lock.json",
+    "format:swift": "xcrun swift-format format --in-place --recursive studio/native"
+  },
+  "devDependencies": {
+    "prettier": "3.10.1"
+  }
+}
