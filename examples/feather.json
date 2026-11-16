@@ -1,0 +1,1473 @@
+{
+  "version": 1,
+  "id": "feather",
+  "title": "The Race a Feather Can Win",
+  "language": "en-US",
+  "voice": {
+    "provider": "apple",
+    "name": "Samantha",
+    "rate": 0.48
+  },
+  "sources": [
+    {
+      "id": "nasa",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_15_feather_drop.html",
+      "evidence": "David Scott demonstrated a hammer and feather falling together on Apollo 15 in near vacuum, without air resistance."
+    },
+    {
+      "id": "harvard",
+      "url": "https://sciencedemonstrations.fas.harvard.edu/presentations/feather-and-dime",
+      "evidence": "A feather and coin fall at different rates with air in the tube; evacuating the tube lets them fall together."
+    }
+  ],
+  "facts": [
+    {
+      "id": "drop",
+      "claim": "David Scott dropped a hammer and feather on the Moon during Apollo 15 in 1971; they reached the surface together.",
+      "source": "nasa"
+    },
+    {
+      "id": "air",
+      "claim": "Air resistance changes the observed fall of a feather relative to a dense object.",
+      "source": "harvard"
+    },
+    {
+      "id": "vacuum",
+      "claim": "Objects released together from the same height with negligible air resistance share the same gravitational acceleration, regardless of mass.",
+      "source": "nasa"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "beat-01",
+      "narration": "This feather can tie a hammer in a race to the ground.",
+      "background": "paper",
+      "transition": "cut",
+      "facts": [
+        "vacuum"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 950.8,
+          "toY": 1370.8,
+          "scale": 0.8,
+          "motion": "gravity"
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 938.0,
+          "toY": 1358.0,
+          "scale": 0.8,
+          "motion": "gravity"
+        }
+      ],
+      "camera": {
+        "mode": "zoom",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "click"
+    },
+    {
+      "id": "beat-02",
+      "narration": "Try that in your room, and the hammer wins.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "grab",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 950.8,
+          "toY": 1370.8,
+          "scale": 0.8,
+          "motion": "gravity"
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 938.0,
+          "toY": 1138.0,
+          "scale": 0.8,
+          "motion": "gravity"
+        }
+      ],
+      "camera": {
+        "mode": "pan",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "impact"
+    },
+    {
+      "id": "beat-03",
+      "narration": "The feather drifts around like it forgot the competition.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "point",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 850,
+          "toY": 1160,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-04",
+      "narration": "That makes the hammer look like gravity's favorite.",
+      "background": "lab",
+      "transition": "cut",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "zoom",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-05",
+      "narration": "But your room has an invisible contestant: air.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "air",
+          "kind": "air",
+          "x": 720,
+          "y": 1100,
+          "toY": 1100,
+          "scale": 0.9
+        }
+      ],
+      "camera": {
+        "mode": "pan",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "click"
+    },
+    {
+      "id": "beat-06",
+      "narration": "As the feather falls, it has to push through it.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "push",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "air",
+          "kind": "air",
+          "x": 720,
+          "y": 1100,
+          "toY": 1100,
+          "scale": 0.9
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-07",
+      "narration": "Its broad shape gives the air plenty to push back against.",
+      "background": "lab",
+      "transition": "cut",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "point",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "air",
+          "kind": "air",
+          "x": 720,
+          "y": 1100,
+          "toY": 1100,
+          "scale": 0.9
+        }
+      ],
+      "camera": {
+        "mode": "zoom",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-08",
+      "narration": "The hammer gets slowed down much less in this comparison.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "grab",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "air",
+          "kind": "air",
+          "x": 720,
+          "y": 1100,
+          "toY": 1100,
+          "scale": 0.9
+        }
+      ],
+      "camera": {
+        "mode": "pan",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-09",
+      "narration": "So this race is testing more than gravity.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "point",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "air",
+          "kind": "air",
+          "x": 720,
+          "y": 1100,
+          "toY": 1100,
+          "scale": 0.9
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": 0
+      },
+      "sound": "click"
+    },
+    {
+      "id": "beat-10",
+      "narration": "Want a fair rematch? Take the air away.",
+      "background": "lab",
+      "transition": "cut",
+      "facts": [
+        "vacuum"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "push",
+          "x": 280,
+          "toX": 335,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "pump",
+          "kind": "machine",
+          "x": 490,
+          "y": 1300,
+          "toY": 1300,
+          "scale": 0.6,
+          "toX": 545
+        },
+        {
+          "id": "chamber",
+          "kind": "chamber",
+          "x": 735,
+          "y": 1120,
+          "toY": 1120,
+          "scale": 1.05
+        }
+      ],
+      "camera": {
+        "mode": "zoom",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-11",
+      "narration": "A vacuum chamber can do that right here on Earth.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "push",
+          "x": 280,
+          "toX": 335,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "pump",
+          "kind": "machine",
+          "x": 490,
+          "y": 1300,
+          "toY": 1300,
+          "scale": 0.6,
+          "toX": 545
+        },
+        {
+          "id": "chamber",
+          "kind": "chamber",
+          "x": 735,
+          "y": 1120,
+          "toY": 1120,
+          "scale": 1.05
+        }
+      ],
+      "camera": {
+        "mode": "pan",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-12",
+      "narration": "Keep the release height the same. Let both objects go together.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [
+        "vacuum"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "point",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 950.8,
+          "toY": 1370.8,
+          "scale": 0.8,
+          "motion": "gravity"
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 938.0,
+          "toY": 1358.0,
+          "scale": 0.8,
+          "motion": "gravity"
+        },
+        {
+          "id": "pump",
+          "kind": "machine",
+          "x": 540,
+          "y": 1300,
+          "toY": 1300,
+          "scale": 0.6
+        },
+        {
+          "id": "chamber",
+          "kind": "chamber",
+          "x": 735,
+          "y": 1120,
+          "toY": 1120,
+          "scale": 1.05
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": 0
+      },
+      "sound": "click"
+    },
+    {
+      "id": "beat-13",
+      "narration": "Now the feather stops drifting behind.",
+      "background": "paper",
+      "transition": "cut",
+      "facts": [
+        "vacuum"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "chamber",
+          "kind": "chamber",
+          "x": 735,
+          "y": 1120,
+          "toY": 1120,
+          "scale": 1.05
+        }
+      ],
+      "camera": {
+        "mode": "zoom",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "click"
+    },
+    {
+      "id": "beat-14",
+      "narration": "Both objects accelerate together and reach the bottom together.",
+      "background": "paper",
+      "transition": "match",
+      "facts": [
+        "vacuum"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "celebrate",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 950.8,
+          "toY": 1370.8,
+          "scale": 0.8,
+          "motion": "gravity"
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 938.0,
+          "toY": 1358.0,
+          "scale": 0.8,
+          "motion": "gravity"
+        },
+        {
+          "id": "chamber",
+          "kind": "chamber",
+          "x": 735,
+          "y": 1120,
+          "toY": 1120,
+          "scale": 1.05
+        }
+      ],
+      "camera": {
+        "mode": "pan",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "impact"
+    },
+    {
+      "id": "beat-15",
+      "narration": "An astronaut actually performed this demonstration on the Moon.",
+      "background": "moon",
+      "transition": "match",
+      "facts": [
+        "drop"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "walk",
+          "x": 330,
+          "toX": 400,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-16",
+      "narration": "In nineteen seventy-one, David Scott brought a hammer and a feather.",
+      "background": "moon",
+      "transition": "cut",
+      "facts": [
+        "drop"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "grab",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "zoom",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-17",
+      "narration": "The Moon already supplied something a laboratory has to create.",
+      "background": "moon",
+      "transition": "match",
+      "facts": [
+        "drop"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "point",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "pan",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "click"
+    },
+    {
+      "id": "beat-18",
+      "narration": "An environment with almost no air to interfere.",
+      "background": "moon",
+      "transition": "match",
+      "facts": [
+        "drop"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-19",
+      "narration": "Scott released them, and both reached the lunar surface together.",
+      "background": "moon",
+      "transition": "cut",
+      "facts": [
+        "drop"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "celebrate",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 950.8,
+          "toY": 1370.8,
+          "scale": 0.8,
+          "motion": "gravity"
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 938.0,
+          "toY": 1358.0,
+          "scale": 0.8,
+          "motion": "gravity"
+        }
+      ],
+      "camera": {
+        "mode": "zoom",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "impact"
+    },
+    {
+      "id": "beat-20",
+      "narration": "The feather was still light. The hammer was still heavy.",
+      "background": "paper",
+      "transition": "match",
+      "facts": [
+        "vacuum"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "point",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "pan",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-21",
+      "narration": "Removing the air did not change their masses.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [
+        "vacuum"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "grab",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "pump",
+          "kind": "machine",
+          "x": 540,
+          "y": 1300,
+          "toY": 1300,
+          "scale": 0.6
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": 0
+      },
+      "sound": "click"
+    },
+    {
+      "id": "beat-22",
+      "narration": "It removed the drag that had disguised the result.",
+      "background": "lab",
+      "transition": "cut",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "point",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "pump",
+          "kind": "machine",
+          "x": 540,
+          "y": 1300,
+          "toY": 1300,
+          "scale": 0.6
+        }
+      ],
+      "camera": {
+        "mode": "zoom",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-23",
+      "narration": "For this race, gravity did not need to pick a favorite.",
+      "background": "paper",
+      "transition": "match",
+      "facts": [
+        "vacuum"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 760,
+          "toY": 760,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "pan",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-24",
+      "narration": "The feather just needed the air to get out of its way.",
+      "background": "paper",
+      "transition": "match",
+      "facts": [
+        "air"
+      ],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "celebrate",
+          "x": 300,
+          "toX": 300,
+          "scale": 1.2,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.8,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "x": 640,
+          "y": 950.8,
+          "toY": 1370.8,
+          "scale": 0.8,
+          "motion": "gravity"
+        },
+        {
+          "id": "feather",
+          "kind": "feather",
+          "x": 825,
+          "y": 938.0,
+          "toY": 1358.0,
+          "scale": 0.8,
+          "motion": "gravity"
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": 0
+      },
+      "sound": "none"
+    }
+  ],
+  "editorialNotes": "Original educational reconstruction. Cartoon characters and laboratory views are illustrative; no historical dialogue or original NASA footage is reproduced."
+}

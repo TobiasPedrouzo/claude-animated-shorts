@@ -8,7 +8,7 @@
 // Place changes crossfade by stacking a second canvas for the fade frames; the hook ends on a 4-frame white flash.
 import React, { useEffect, useMemo, useState } from "react";
 import * as THREE from "three";
-import { AbsoluteFill, continueRender, delayRender, getInputProps, useCurrentFrame } from "remotion";
+import { AbsoluteFill, cancelRender, continueRender, delayRender, getInputProps, useCurrentFrame } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import { EffectComposer } from "@react-three/postprocessing";
@@ -42,7 +42,7 @@ const fwd = new THREE.Vector3(), fpt = new THREE.Vector3();
 const useKit = () => {
   const [kit, setKit] = useState<Kit | null>(null);
   const [handle] = useState(() => delayRender("bridge kit"));
-  useEffect(() => { loadKit().then((k) => { setKit(k); continueRender(handle); }); }, [handle]);
+  useEffect(() => { loadKit().then((k) => { setKit(k); continueRender(handle); }).catch((error: unknown) => cancelRender(error instanceof Error ? error : new Error(String(error)))); }, [handle]);
   return kit;
 };
 

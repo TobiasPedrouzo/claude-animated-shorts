@@ -1,3 +1,7 @@
+> **Estado de las mejoras: experimento visual rechazado.** El motor nativo añadido en la rama `codex/local-production-studio` no alcanza el nivel visual requerido y no está habilitado como motor de producción. Los resultados de velocidad y QA comprueban funcionamiento técnico; no prueban calidad narrativa o artística. La base original se conserva a continuación.
+>
+> La CLI bloquea el render predeterminado, la aprobación y la exportación de ese motor. Solo se puede ejecutar de forma explícita como prueba con `npm run demo:experimental`. Ver [revisión visual](docs/VISUAL_REVIEW.md) y [documentación del experimento](docs/EXPERIMENTAL_STUDIO.md).
+
 # Claude Animated Shorts
 
 The free Claude skill from the video **"How to Make Viral Animated Shorts Using Claude (Full Workflow)"**.

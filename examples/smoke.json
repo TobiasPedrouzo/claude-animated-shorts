@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "id": "smoke",
+  "title": "Rig and interaction smoke test",
+  "language": "en-US",
+  "voice": {
+    "provider": "apple",
+    "name": "Samantha",
+    "rate": 0.45
+  },
+  "sources": [],
+  "facts": [],
+  "scenes": [
+    {
+      "id": "beat-01",
+      "narration": "Walk toward the strange machine.",
+      "background": "paper",
+      "transition": "cut",
+      "facts": [],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "walk",
+          "x": 300,
+          "toX": 420,
+          "scale": 1,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.78,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "pump",
+          "kind": "machine",
+          "x": 620,
+          "y": 1270,
+          "toY": 1270,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "click"
+    },
+    {
+      "id": "beat-02",
+      "narration": "Reach out and grab the book.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "grab",
+          "x": 300,
+          "toX": 300,
+          "scale": 1,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.78,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "book",
+          "kind": "book",
+          "x": 440,
+          "y": 1100,
+          "toY": 1100,
+          "scale": 0.6,
+          "attachTo": "pip"
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "impact"
+    },
+    {
+      "id": "beat-03",
+      "narration": "Point to the moving dial.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "point",
+          "x": 300,
+          "toX": 300,
+          "scale": 1,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "idle",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.78,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "pump",
+          "kind": "machine",
+          "x": 620,
+          "y": 1270,
+          "toY": 1270,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-04",
+      "narration": "Push the machine a little farther.",
+      "background": "lab",
+      "transition": "cut",
+      "facts": [],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "push",
+          "x": 300,
+          "toX": 420,
+          "scale": 1,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "point",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.78,
+          "accent": "#d6a65c"
+        }
+      ],
+      "props": [
+        {
+          "id": "pump",
+          "kind": "machine",
+          "x": 535,
+          "y": 1270,
+          "toY": 1270,
+          "scale": 0.8,
+          "toX": 655
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.055,
+        "pan": 0
+      },
+      "sound": "none"
+    },
+    {
+      "id": "beat-05",
+      "narration": "Then lose your balance and fall.",
+      "background": "lab",
+      "transition": "match",
+      "facts": [],
+      "dramatization": true,
+      "characters": [
+        {
+          "id": "pip",
+          "kind": "stickman",
+          "action": "fall",
+          "x": 300,
+          "toX": 300,
+          "scale": 1,
+          "accent": "#418e96"
+        },
+        {
+          "id": "dot",
+          "kind": "stickman",
+          "action": "surprise",
+          "x": 150,
+          "toX": 150,
+          "scale": 0.78,
+          "accent": "#d6a65c"
+        },
+        {
+          "id": "observer",
+          "kind": "observer",
+          "action": "idle",
+          "x": 935,
+          "toX": 935,
+          "scale": 0.55,
+          "accent": "#e0fcff"
+        }
+      ],
+      "props": [
+        {
+          "id": "pump",
+          "kind": "machine",
+          "x": 620,
+          "y": 1270,
+          "toY": 1270,
+          "scale": 0.8
+        }
+      ],
+      "camera": {
+        "mode": "follow",
+        "zoom": 1.025,
+        "pan": -12
+      },
+      "sound": "click"
+    }
+  ]
+}
